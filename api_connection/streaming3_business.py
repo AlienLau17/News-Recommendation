@@ -25,5 +25,10 @@ for i in range(60):
             #             lines[w] += 1
 
             articles[url] = content
+    print(articles)
     sleep(900)
-print (articles)
+
+with open('business.csv', 'w') as csv_file:
+    writer = csv.writer(csv_file)
+    for key, value in articles.items():
+        writer.writerow([key, value])

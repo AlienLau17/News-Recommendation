@@ -6,7 +6,7 @@ import collections
 import csv
 
 articles = dict()
-url ='https://newsapi.org/v2/top-headlines?country=US&category=business&apiKey=b30f535c6b624930bb419501ba02cece'
+url ='https://newsapi.org/v2/top-headlines?country=US&category=entertainment&apiKey=b30f535c6b624930bb419501ba02cece'
 response = requests.get(url)
 r1 = response.json()
 # articles: source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content'

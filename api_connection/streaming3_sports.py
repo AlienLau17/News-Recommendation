@@ -25,6 +25,7 @@ for i in range(60):
             #             lines[w] += 1
 
             articles[url] = content
+    print(articles)
     sleep(900)
 
 with open('sports.csv', 'w') as csv_file:
