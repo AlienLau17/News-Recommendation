@@ -8,7 +8,7 @@ import csv
 # nltk.download('stopwords')
 
 articles = dict()
-for i in range(30):
+for i in range(60):
     url ='https://newsapi.org/v2/top-headlines?country=us&apiKey=b30f535c6b624930bb419501ba02cece'
     response = requests.get(url)
     r1 = response.json()
