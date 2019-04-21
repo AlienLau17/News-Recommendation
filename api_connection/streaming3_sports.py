@@ -7,7 +7,7 @@ import csv
 
 
 articles = dict()
-for i in range(60):
+for i in range(2):
     url ='https://newsapi.org/v2/top-headlines?country=US&category=sports&apiKey=b30f535c6b624930bb419501ba02cece'
     response = requests.get(url)
     r1 = response.json()
@@ -26,7 +26,7 @@ for i in range(60):
 
             articles[url] = content
     print(articles)
-    sleep(900)
+    sleep(5)
 
 with open('sports.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
