@@ -3,9 +3,11 @@ import time
 from time import sleep
 import csv
 
+run_time = 5 # hours
 category = 'sports_'
-date = time.strftime('%Y_%m_%d', time.localtime(time.time()))
-file_name = category+date+'.csv'
+date = time.strftime('%Y_%m_%d_%H_', time.localtime(time.time()))
+
+file_name = category + date + str(run_time) + 'h.csv'
 
 url_img_dict = dict()
 url_title_dict = dict()
@@ -15,7 +17,6 @@ with open(file_name, 'w+') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(['url', 'title', 'description', 'urlToImage'])
 
-run_time = 5 # hours
 
 for i in range(run_time*60):
     url ='https://newsapi.org/v2/top-headlines?country=US&category=sport&apiKey=b30f535c6b624930bb419501ba02cece'

@@ -6,8 +6,9 @@ import csv
 run_time = 5 # hours
 
 category = 'business_'
-date = time.strftime('%Y_%m_%d', time.localtime(time.time()))
-file_name = category+date+'.csv'
+date = time.strftime('%Y_%m_%d_%H_', time.localtime(time.time()))
+
+file_name = category + date + str(run_time) + 'h.csv'
 
 api_url ='https://newsapi.org/v2/top-headlines?country=US&category=business&apiKey=b30f535c6b624930bb419501ba02cece'
 
