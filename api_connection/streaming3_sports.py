@@ -5,10 +5,13 @@ import collections
 # import nltk
 import csv
 
-
+category = 'sport'
+date = time.strftime('%Y_%m_%d',time.localtime(time.time()))
+file_name = category+date
+print(file_name)
 articles = dict()
 for i in range(2):
-    url ='https://newsapi.org/v2/top-headlines?country=US&category=sports&apiKey=b30f535c6b624930bb419501ba02cece'
+    url ='https://newsapi.org/v2/everything?q=sport&&apiKey=b30f535c6b624930bb419501ba02cece'
     response = requests.get(url)
     r1 = response.json()
     # articles: source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content'
