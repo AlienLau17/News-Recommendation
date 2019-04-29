@@ -32,3 +32,8 @@ with open("2019_sport.csv", "w") as csvoutput:
 #             next(r, None)
 #             for row in r:
 #                 w.writerow(row)
+
+category = ['sports', 'entertainment']
+time = '2019'
+for i in range(len(category)):
+    file = time + category[i]+'.csv'
