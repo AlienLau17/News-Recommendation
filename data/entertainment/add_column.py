@@ -44,3 +44,12 @@ with open("2019_04_27_13_22h_entertainment.csv" , "r") as csvinput:
         w.writerow(["url", "title", "description", "urlToImage", "date"])
         for row in csv.reader(csvinput):
             w.writerow(row + ["2019-04-27"])
+
+with open("2019_04_28_13_22h_entertainment.csv" , "r") as csvinput:
+    r = csv.reader(csvinput)
+    with open("2019_04_28_entertainment.csv", "w") as csvoutput:
+        w = csv.writer(csvoutput)
+        next(r, None)
+        w.writerow(["url", "title", "description", "urlToImage", "date"])
+        for row in csv.reader(csvinput):
+            w.writerow(row + ["2019-04-28"])
